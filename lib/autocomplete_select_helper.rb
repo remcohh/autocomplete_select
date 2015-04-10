@@ -68,7 +68,7 @@ module AutocompleteSelectHelper
                      end
     
     container_class_names = ["autocomplete-select"]
-    container_class_names << "fieldWithErrors" if errors.on(attribute) || errors.on(method)
+    container_class_names << "field_with_errors" unless errors.empty?
     container_class_names << "disabled" if disabled
     
     insert = capture(&block) if block_given?
